@@ -22,8 +22,13 @@ const otherRoads = [
 ];
 
 /*
-  Process the "otherRoads" array of strings so you can call addRoad for each pair of locations.
+    Process the "otherRoads" array of strings so you can call addRoad for each pair of locations.
 */
 
+for (let [from, to] of otherRoads.map(p => p.split(" <=> "))) {
+  addRoad(from, to);
+};
+
+console.log(otherRoads);
 
 module.exports = addRoad;
